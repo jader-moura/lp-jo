@@ -1,0 +1,56 @@
+body {
+  background-color: var(--white);
+  color: var(--text);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, input, textarea, button {
+  font: 400 1rem "Lato", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Heebo', sans-serif;
+  padding: 15px 50px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-family: "Heebo", Sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  color: var(--text);
+}
+
+:root {
+  --main: #AD9271;
+  --title: #181818;
+  --text: #666;
+  --gray-back: #F5F5F5;
+  --white: #fff;
+}
+
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 728px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
