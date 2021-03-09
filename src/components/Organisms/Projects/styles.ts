@@ -33,7 +33,7 @@ export const Titles = styled.article`
     z-index: 2;
   }
   h3 {
-    text-shadow: 0px 0px 1px rgb(0 0 0 / 70%);
+    text-shadow: 0px 0px 2px var(--title);
     font-size: 100px;
     font-weight: 600;
     text-transform: uppercase;

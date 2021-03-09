@@ -8,7 +8,15 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 32%;
   margin-bottom: 2rem;
+  svg {
+    color: var(--main);
+    transition: .3s ease-in;
+  }
+  p {
+    transition: .3s ease-in;
+  }
   h3 { 
+    transition: .3s ease-in;
     font-size: 1.5rem;
     color: var(--title);
     font-weight: 600;
@@ -22,13 +30,12 @@ export const Container = styled.div`
     h3, p {
       color: var(--white);
     }
-    Icon {
+    svg {
       color: var(--white);
     }
   }
 `;
 
 export const Icon = styled(House)`
-  color: var(--main);
   width: 2rem;
 `;

@@ -35,11 +35,12 @@ p {
 }
 
 :root {
-  --main: #AD9271;
+  --main: #c48f27;
   --title: #181818;
   --text: #666;
   --gray-back: #F5F5F5;
   --white: #fff;
+  --other: #c48f27;
 }
 
 @media(max-width: 1080px) {

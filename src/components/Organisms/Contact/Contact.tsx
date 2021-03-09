@@ -1,6 +1,6 @@
 import React from 'react';
-import BlackButton from '../Atoms/BlackButton/BlackButton';
-import ContentWidth from '../Atoms/ContentWidth/ContentWidth';
+import BlackButton from '../../Molecules/BlackButton/BlackButton';
+import ContentWidth from '../../Molecules/ContentWidth/ContentWidth';
 import { Container, Content, Columns, ContactForm, Phone, MailIcon, WhatsappIcon } from './styles';
 
 const Contact = () => {

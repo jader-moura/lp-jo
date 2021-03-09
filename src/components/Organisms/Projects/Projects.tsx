@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectCard from '../Atoms/ProjectCard/ProjectCard';
+import ProjectCard from '../../Molecules/ProjectCard/ProjectCard';
 import { Container, Texts, Titles, Portfolio } from './styles';
 
 const Projects = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Testimony from '../Atoms/Testimony/Testimony';
+import Testimony from '../../Molecules/Testimony/Testimony';
 import { Container, TestimonialContent } from './styles';
 
 const Testimonials = () => {

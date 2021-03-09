@@ -1,12 +1,22 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background-image: url('first-image.jpg');
+interface SliderProps {
+  src: string;
+}
+
+
+export const Container = styled.div<SliderProps>`
+  background-image: url(${(props) => props.src});
   background-repeat: no-repeat center;
   background-size: cover;
   box-shadow:inset 0 0 0 2000px #00000099;
+  /* opacity: 1;
+  animation: fade 1s linear;
+  @keyframes fade {
+  0% { opacity: 0.5 }
+  100% { opacity: 1 }
+  } */
   `;
-
 export const Content = styled.div`
   height: 100vh;
   display: flex;
@@ -16,7 +26,11 @@ export const Content = styled.div`
   
   text-transform: uppercase;
   font-weight: 600;
-
+  img {
+    height: 100px;
+    width: 100px;
+    z-index: 9999999;
+  }
   h1 {
     font-size: 72px;
     letter-spacing: 1.2px;
@@ -34,6 +48,7 @@ export const Content = styled.div`
     background-color: transparent;
     border: 1px solid var(--white);
     margin-top: 3rem;
+    transition: .2s ease-in;
     :hover {
       background-color: var(--white);
       color: var(--title);
