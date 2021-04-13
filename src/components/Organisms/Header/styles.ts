@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Map } from '@styled-icons/boxicons-solid/Map';
 import { PhoneFill } from '@styled-icons/bootstrap/PhoneFill';
 import { ClockFill } from '@styled-icons/bootstrap/ClockFill';
+import { Menu2Outline } from '@styled-icons/evaicons-outline/Menu2Outline';
+import { CloseCircle } from '@styled-icons/ionicons-outline/CloseCircle'
 
 export const Container = styled.div`
   display: flex;
@@ -61,6 +63,7 @@ export const Menu = styled.article`
   }
 `;
 
+
 export const MapIcon = styled(Map)`
   height: 15px;
   width: 15px;
@@ -82,6 +85,25 @@ export const ClockIcon = styled(ClockFill)`
   margin-right: 0.5rem;
 `;
 
+export const MenuIcon = styled(Menu2Outline)`
+  height: 30px;
+  width: 30px;
+  color: var(--white);
+`;
+
+export const CloseIcon = styled(CloseCircle)`
+  height: 30px;
+  width: 30px;
+  color: var(--white);
+  position: absolute;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+`;
+
+
+
+
 export const StyckyHeader = styled.div`
   background-color: var(--title);
   height: 150px;
@@ -90,4 +112,30 @@ export const StyckyHeader = styled.div`
   top: 0;
   left: 0;
   right: 0;
+`;
+
+export const MenuMobile = styled.div`
+  background-color: var(--title);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  a {
+    color: var(--white);
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    :hover {
+      color: var(--main);
+    }
+  }
 `;

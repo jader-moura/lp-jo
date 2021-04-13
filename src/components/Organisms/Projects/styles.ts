@@ -42,6 +42,17 @@ export const Titles = styled.article`
     position: absolute;
     top: 0;
     transform: translateY(-40%);
+
+  }
+  @media(max-width: 765px) {
+    h3 {
+      font-size: 60px;
+      transform: translateY(-30%);
+      text-shadow: 0px 0px 1px var(--title);
+    }
+    h2 {
+      font-size: 24px;
+    }
   }
 `;
 

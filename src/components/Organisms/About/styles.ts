@@ -5,11 +5,32 @@ export const Container = styled.div`
   display: flex;
   img {
     max-width: 500px;
+    object-fit: contain;
   }
   section {
     display: flex;
     flex-direction: column;
-    margin-right: 150px;
+    margin-right: 80px;
+  }
+  @media(max-width: 1100px) {
+    img {
+      max-width: 400px;
+    }
+    section {
+      margin-right: 0px;
+    }
+  }
+  @media(max-width: 830px) {
+    flex-wrap: wrap;
+    img {
+      min-width: 85%;
+      margin-right: 15%;
+    }
+    section {
+      max-width: 100%;
+      margin-left: 20%;
+      margin-top: -40%;
+    }
   }
 `;
 

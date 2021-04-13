@@ -11,6 +11,7 @@ export const Container = styled.div<SliderProps>`
   background-size: 100% 100%;
   box-shadow:inset 0 0 0 2000px #00000099;
   animation: zoomin 15s  linear;
+  object-fit: cover;
   @keyframes zoomin {
     0% { 
       background-size: 100% 100%;
@@ -29,6 +30,7 @@ export const Content = styled.div`
   
   text-transform: uppercase;
   font-weight: 600;
+  text-align: center;
   h1 {
     font-size: 72px;
     letter-spacing: 1.2px;
@@ -51,6 +53,23 @@ export const Content = styled.div`
     :hover {
       background-color: var(--white);
       color: var(--title);
+    }
+  }
+
+  @media(max-width: 901px) {
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+  @media(max-width: 567px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 16px;
     }
   }
 `;

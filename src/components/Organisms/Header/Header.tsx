@@ -1,36 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   Container, 
   TopBar, 
   Head, 
   Logo, 
   Menu, 
+  MenuMobile,
   MapIcon, 
   PhoneIcon, 
   ClockIcon,
+  MenuIcon,
+  CloseIcon,
 } from './styles';
 
 const Header = () => {
+  const[isMobile, setIsMobile] = useState(false);
+  const[openToggle, setOpenToggle] = useState(false);
+
+  useEffect(() => {
+    if(window.innerWidth <= 767) {
+      setIsMobile(true)
+    }
+  },[]);
+  
   return (
     <Container>
-      <TopBar>
-        <label>
-          <a href="#" target="_blank"><MapIcon />Rua Modesto Batista, 3117. Vilhena, RO</a>
-          <a href="#" target="_blank"><PhoneIcon />(+62) 81 2345 1234</a>
-        </label>
-        <label>
-          <a href="#" target="_blank"><ClockIcon />Funcionamento : Seg-Sex 08:00 - 17:00 hr</a>
-        </label>
-      </TopBar>
+      {!isMobile &&
+        <TopBar>
+          <label>
+            <a href="https://goo.gl/maps/gVRkfFQGYw67r3Fk6" target="_blank"><MapIcon />Rua Modesto Batista, 3117. Vilhena, RO</a>
+            <a href="tel:+5569993720758" target="_blank"><PhoneIcon />+55 (69) 99372-0758</a>
+          </label>
+          <label> 
+            <a><ClockIcon />Funcionamento : Seg-Sex 08:00 - 17:00 hr</a>
+          </label>
+        </TopBar>
+      }
       <Head>
         <Logo src="/logo-white.png"/>
-        <Menu>
-          <a href="#">Home</a>
-          <a href="#about">Sobre</a>
-          <a href="#services">Serviços</a>
-          <a href="#projects">Projetos</a>
-          <a href="#contact">Contato</a>
-        </Menu>
+        {isMobile ? 
+          <>
+            <MenuIcon onClick={() => setOpenToggle(true)} />
+            {openToggle &&
+              <MenuMobile>
+                <a href="#">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#serviços">Serviços</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+                <CloseIcon onClick={() => setOpenToggle(false)} />
+              </MenuMobile>
+            }
+          </>
+        :
+          <Menu>
+            <a href="#">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#serviços">Serviços</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+          </Menu>
+        }
       </Head>
     </Container>
   )
