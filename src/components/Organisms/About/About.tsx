@@ -20,14 +20,14 @@ const About = ({ subtitle, title, text, id }: props) => {
         <img src="/image-about.jpg" />
         <section>
           <BoxText>
-            <h3>{subtitle = "Welcome to inner"}</h3>
-            <h2>{title = "INNOVATIVE IDEAS STYLISH DESIGNS"}</h2>
-            <p>{text = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."}</p>
-            <Button href="#" text="Read More" />
+            <h3>{subtitle = "Bem-Vindos"}</h3>
+            <h2>{title = "Jordana Mariano"}</h2>
+            <p>{text = "Formada em Arquitetura e Urbanismo, Jordana Mariano trabalha em carreira solo fazendo muitas vezes parcerias com colegas de profissão, elabora projetos capazes de explorar e experimentar a arquitetura na mais ampla escala possível; desde casas, escolas, edifícios religiosos, hotéis, edifícios universitários, centros de recreação, acreditando em dar a soluções únicas para oferecer o melhor aos seus clientes."}</p>
+            <Button href="#" text="Entrar em contato" />
           </BoxText>
           <CounterContent>
-            <Counter countTotal={25} countText="Years of experience" key={1} />
-            <Counter countTotal={38} countText="Years of experience"  key={2} />
+            <Counter countTotal={3} countText="Anos de experiência" key={1} />
+            <Counter countTotal={29} countText="Projetos criados"  key={2} />
           </CounterContent>
         </section>
       </Container>

@@ -43,6 +43,10 @@ p {
   --other: #c48f27;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media(max-width: 1080px) {
   html {
     font-size: 93.75%;

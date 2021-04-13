@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FacebookWithCircle } from '@styled-icons/entypo-social/FacebookWithCircle';
+import { UserNinja } from '@styled-icons/fa-solid/UserNinja';
 import { InstagramWithCircle } from '@styled-icons/entypo-social/InstagramWithCircle';
 import { LinkedinWithCircle } from '@styled-icons/entypo-social/LinkedinWithCircle';
 
@@ -32,7 +32,7 @@ export const IconContent = styled.section`
   padding-bottom: 1rem;
 `;
 
-export const FacebookIcon = styled(FacebookWithCircle)`
+export const GetNinjaIcon = styled(UserNinja)`
   width: 34px;
   height: 34px;
   color: var(--title);

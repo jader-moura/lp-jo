@@ -1,12 +1,25 @@
 import React from 'react';
 import { Container } from './styles';
 
-const ProjectCard = () => {
+interface ProjectCardProps {
+  title: string,
+  text: string,
+  image: string,
+  key: number,
+  onclick: () => void
+}
+
+const ProjectCard = ({ title, text, image, key, onclick}:ProjectCardProps) => {
+
+
   return (
-    <Container>
-      <h3>Comercial Design</h3>
-      <p>Far far away behind the word mountains far from the countries Vokalia and Consonantia there live the blind texts.</p>
-    </Container>
+    <>
+      <Container image={image} key={key} onClick={onclick}>
+        <h3>{title}</h3>
+        <p>{text}</p>
+      </Container>
+      {/* {modalActived && <Modal onClick={closeModal}> <ModalImage key={id} src={image}/> </Modal>} */}
+    </>
   )
 }
 

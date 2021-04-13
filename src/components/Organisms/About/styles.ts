@@ -26,7 +26,7 @@ export const BoxText = styled.div`
     font-weight: 600;
   }
   h2 {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.3em;

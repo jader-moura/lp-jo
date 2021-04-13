@@ -17,7 +17,7 @@ const Slider  = () => {
   useEffect(() => {
     countdownTimeout = setTimeout(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
   }, [slide])
 
   return (
@@ -29,9 +29,9 @@ const Slider  = () => {
               <Container src={element.image} key={index}>
                 <ContentWidth>
                   <Content>
-                    <h1>Interior designs</h1>
-                    <h2>From the future</h2>
-                    <button>View portfolio</button>
+                    <h1>Jordana Mariano</h1>
+                    <h2>Arquitetura | Urbanismo | Paisagísmo</h2>
+                    <button>Ver projetos</button>
                   </Content>
                 </ContentWidth>
               </Container>

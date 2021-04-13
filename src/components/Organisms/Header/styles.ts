@@ -86,7 +86,7 @@ export const StyckyHeader = styled.div`
   background-color: var(--title);
   height: 150px;
   position: sticky;
-  z-index: 100;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;

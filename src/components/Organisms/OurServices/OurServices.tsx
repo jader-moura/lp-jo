@@ -3,6 +3,8 @@ import BlackButton from '../../Molecules/BlackButton/BlackButton';
 import ContentWidth from '../../Molecules/ContentWidth/ContentWidth';
 import ServiceCard from '../../Molecules/ServiceCard/ServiceCard';
 import { Container, TextContent, Content} from './styles';
+import { OurServicesData } from './OurServicesData'
+
 
 const OurServices = () => {
   return(
@@ -10,30 +12,21 @@ const OurServices = () => {
       <ContentWidth>
         <Content>
           <TextContent>
-            <h2>Our services</h2>
-            <p>Far far away behind the word mountains far from the countries Vokalia and Consonantia there live the blind texts.</p>
-            <BlackButton text="View all" href="#" />
+            <h2>Nossos serviços</h2>
+            <p>O Escritório JM produz design inovador baseado na observação das interações cotidianas, que guardam possibilidades espaciais e programáticas imprevisíveis. Estamos dedicados a defender os desejos e necessidades de nossos clientes.</p>
+            <BlackButton text="Ver todos" href="#" />
           </TextContent>
-          <ServiceCard 
-            title="Residential Design" 
-            text="We bring the right people together to challenge established thinking and drive transform in 2020" 
-          />
-          <ServiceCard 
-            title="Residential Design" 
-            text="We bring the right people together to challenge established thinkingdrive transform in 2020" 
-          />
-          <ServiceCard 
-            title="Residential Design" 
-            text="We bring the right people together to challenge established thinking and drive transform in 2020" 
-          />
-          <ServiceCard 
-            title="Residential Design" 
-            text="We bring the right people together to challenge established thinkin drive transform in 2020" 
-          />
-          <ServiceCard 
-            title="Residential Design" 
-            text="We bring the right people together to challenge established thinkin drive transform in 2020" 
-          />
+          {OurServicesData.map((element, index) => {
+            return (
+              <ServiceCard 
+                key={index}
+                icontype={element.icontype}
+                title={element.title}
+                text={element.text}
+                image={element.image}
+              />
+            )
+          })}
         </Content>
       </ContentWidth>
     </Container>  

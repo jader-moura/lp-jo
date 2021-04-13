@@ -8,14 +8,17 @@ interface SliderProps {
 export const Container = styled.div<SliderProps>`
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat center;
-  background-size: cover;
+  background-size: 100% 100%;
   box-shadow:inset 0 0 0 2000px #00000099;
-  /* opacity: 1;
-  animation: fade 1s linear;
-  @keyframes fade {
-  0% { opacity: 0.5 }
-  100% { opacity: 1 }
-  } */
+  animation: zoomin 15s  linear;
+  @keyframes zoomin {
+    0% { 
+      background-size: 100% 100%;
+    }
+    100% { 
+      background-size: 110% 110%;
+    }
+  }
   `;
 export const Content = styled.div`
   height: 100vh;
@@ -26,11 +29,6 @@ export const Content = styled.div`
   
   text-transform: uppercase;
   font-weight: 600;
-  img {
-    height: 100px;
-    width: 100px;
-    z-index: 9999999;
-  }
   h1 {
     font-size: 72px;
     letter-spacing: 1.2px;
@@ -38,7 +36,8 @@ export const Content = styled.div`
   }
 
   h2 {
-    font-size: 56px;
+    font-size: 35px;
+    font-weight: 300;
     letter-spacing: 2px;
     color: var(--white);
   }
