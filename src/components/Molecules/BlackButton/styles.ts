@@ -10,8 +10,13 @@ export const Button = styled.a`
   padding: 15px 50px;
   border: 1px solid var(--title);
   transition: .2s ease-in;
+  white-space: nowrap;
   :hover {
     background-color: transparent;
     color: var(--title);
+  }
+
+  @media(max-width: 830px) {
+    font-size: .8rem;
   }
 `;

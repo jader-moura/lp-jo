@@ -22,4 +22,11 @@ export const TextContent = styled.article`
   p {
     margin-bottom: 2rem;
   }
+  @media(max-width: 901px) {
+    max-width: 49%;
+  }
+  @media(max-width: 678px) {
+    min-width: 99%;
+    margin-bottom: 2.5rem;
+  }
 `;

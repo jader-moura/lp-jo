@@ -38,6 +38,10 @@ export const Columns = styled.section`
       color: var(--main);
     }
   }
+
+  @media(max-width: 901px) {
+    width: 100%;
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -69,6 +73,11 @@ export const ContactForm = styled.form`
     :hover {
       border-color: #181818;
     }
+  }
+
+  @media(max-width: 901px) {
+    padding: 30px;
+    margin-top: 3rem;
   }
 `;
 

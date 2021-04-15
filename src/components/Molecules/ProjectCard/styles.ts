@@ -50,5 +50,13 @@ export const Container = styled.div<ProjectCardProps>`
       display: block;
     }
   }
+
+  @media(max-width: 901px) {
+    min-width: 49%;
+  }
+
+  @media(max-width: 767px) {
+    min-width: 100%;
+  }
 `;
 

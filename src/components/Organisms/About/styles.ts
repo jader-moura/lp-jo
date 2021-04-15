@@ -58,6 +58,14 @@ export const BoxText = styled.div`
   p {
     margin-bottom: 2rem;
   }
+
+  @media(max-width: 830px) {
+    padding: 30px;
+    margin: 30px 0  0 -40px;
+    h2 {
+      font-size: 25px;
+    }
+  }
 `;
 
 export const CounterContent = styled.div`
@@ -65,5 +73,8 @@ export const CounterContent = styled.div`
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 60px;
+  @media(max-width: 830px) {
+    padding: 30px;
+  }
 `;
 

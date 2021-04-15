@@ -46,6 +46,14 @@ export const Container = styled.div<props>`
       color: var(--white);
     }
   }
+
+  @media(max-width: 901px) {
+    max-width: 49%;
+  }
+
+  @media(max-width: 678px) {
+    min-width: 99%;
+  }
 `;
 
 export const PencilIcon = styled(PencilRuler2)`

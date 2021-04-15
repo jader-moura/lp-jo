@@ -68,5 +68,11 @@ export const CopyText = styled.article`
   min-width: 100%;
   justify-content: space-between;
   border-top: 1px solid #e7e7e7;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
+
+  @media(max-width: 576px){
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 `;
