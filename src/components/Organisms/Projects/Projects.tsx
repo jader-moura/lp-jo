@@ -1,11 +1,16 @@
 import React from 'react';
 import ProjectCard from '../../Molecules/ProjectCard/ProjectCard';
-import { connect } from 'react-redux';
 import { Container, Texts, Titles, Portfolio } from './styles';
-import * as GalleryActions from '../../../store/Gallery/actions/Gallery.actions';
-import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-const Projects = ({ gallery, toggleItem }) => {
+function toggleItem(element) {
+  return {
+    type: 'SET_MODAL',
+    element
+  };
+}
+
+const Projects = ({ gallery, dispatch }) => {
 
    return (
     <Container>
@@ -17,13 +22,13 @@ const Projects = ({ gallery, toggleItem }) => {
         <p>Conheça nossos últimos projetos.</p>
       </Texts>
       <Portfolio>
-        {gallery.map((element) => (
+        {gallery.map((element, idx) => (
             <ProjectCard 
-              key={element.id}
+              key={idx}
               title={element.title}
               text={element.text}
               image={element.image}
-              onclick={() => toggleItem(element)}
+              onclick={() => dispatch(toggleItem(element))}
             />
           )
         )}
@@ -32,12 +37,5 @@ const Projects = ({ gallery, toggleItem }) => {
   )
 }
 
-const mapStateToProps = state => ({
-  gallery: state.data.gallery
-});
 
-const mapDispatchToProps = dispatch => 
-  bindActionCreators(GalleryActions, dispatch);
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Projects);
+export default connect(state => ({ gallery : state.gallery }))(Projects);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   Container, 
   Content, 
@@ -10,49 +10,62 @@ import {
 } from './styles';
 import { connect } from 'react-redux';
 
-// import { bindActionCreators } from 'redux';
-// import { nextImage, prevImage } from '../../../store/Gallery/actions/Gallery.actions'
+function toggleItem(closeModal) {
+  return {
+    type: 'REMOVE_MODAL',
+    closeModal
+  };
+}
 
-const GalleryModal = ({ modal, item }) => {
 
-  // function mapStateToProps(state){
-  //   return {
-  //     id: state.id
-  //   };
-  // }
+const GalleryModal = ({ modalId, gallery, dispatch }) => {
+  const [position, setPosition] = useState<number>(0);
+  const closeModal = false;
 
-  // function matchDispatchToProps(dispatch){
-  //   return bindActionCreators({nextImage: nextImage, prevImage: prevImage}, dispatch)
-  // };
+  const totalImgs = gallery.length;
 
+  useEffect(() => {
+    if(modalId) {
+      setPosition(modalId - 1)
+    }
+  },[modalId])
+
+  const nextImg = () => {
+    if(position === totalImgs - 1) {
+      setPosition(0)
+    } else {
+      setPosition( position + 1)
+    }
+  }
+
+  const prevImg = () => {
+    if(position === 0) {
+      setPosition(totalImgs - 1)
+    } else {
+      setPosition( position - 1)
+    }
+  }
+
+  console.log(position);
   return (
-    <>
-      {modal && 
-          <Container key={item.id}>
+    <> 
+      {modalId && 
+          <Container key={gallery[position].id}>
             <Content>
-              <CloseIcon />
-              <ModalImage src={item.image} />
+              <CloseIcon onClick={() => dispatch(toggleItem(closeModal))} />
+              <ModalImage src={gallery[position].image} />
               <Arrows>
-                <LeftArrow />
-                <RightArrow />
+                <LeftArrow onClick={prevImg} />
+                <RightArrow onClick={nextImg} />
               </Arrows>
             </Content>
           </Container>
       }
-      {/* {modal &&  
-      <div>
-        <p>modal: {modal}</p>
-        <p>src: {item.image}</p>
-        <p>id: {item.id}</p>
-      </div>
-      } */}
     </>
   )
 }
 
-const mapStateToProps = state => ({
-  item: state.activeModal.item,
-  modal: state.activeModal.modal
-});
-
-export default connect (mapStateToProps)(GalleryModal);
+export default connect(state => ({
+  modalId: state.modalId,
+  gallery: state.gallery
+}))(GalleryModal);
