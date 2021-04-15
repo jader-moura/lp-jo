@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ContentWidth from '../../Molecules/ContentWidth/ContentWidth';
-import { Container, Content } from './styles';
+import { Container, SliderImg, Content } from './styles';
 import { SliderData } from './SliderData';
 
 
-const Slider  = () => {
+const Slider  = ({ id }) => {
   const [slide, setSlide] = useState(0);
   const length = SliderData.length;
 
@@ -26,14 +26,15 @@ const Slider  = () => {
         return (
           <>
             {index === slide && (
-              <Container src={element.image} key={index}>
-                <ContentWidth>
-                  <Content>
-                    <h1>Jordana Mariano</h1>
-                    <h2>Arquitetura | Urbanismo | Paisagísmo</h2>
-                    <button>Ver projetos</button>
-                  </Content>
-                </ContentWidth>
+              <Container key={index}>
+                <SliderImg src={element.image} />
+                  <ContentWidth>
+                    <Content>
+                      <h1>Jordana Mariano</h1>
+                      <h2>Arquitetura | Urbanismo | Paisagísmo</h2>
+                      <button>Ver projetos</button>
+                    </Content>
+                  </ContentWidth>
               </Container>
             )}
           </>

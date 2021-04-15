@@ -17,6 +17,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 `;
 
 export const TopBar = styled.section`
@@ -42,6 +43,11 @@ export const Head = styled.section`
   justify-content: space-between;
   align-items: center;
   height: 100%;
+
+  @media(max-width: 767px) {
+    margin-top: -2rem;
+    padding: 0 1rem;
+  }
 `;
 
 export const Logo = styled.img`
@@ -101,19 +107,6 @@ export const CloseIcon = styled(CloseCircle)`
   top: 1rem;
 `;
 
-
-
-
-export const StyckyHeader = styled.div`
-  background-color: var(--title);
-  height: 150px;
-  position: sticky;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-`;
-
 export const MenuMobile = styled.div`
   background-color: var(--title);
   position: fixed;
@@ -128,6 +121,7 @@ export const MenuMobile = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 3;
   a {
     color: var(--white);
     padding: 1rem;
@@ -136,6 +130,17 @@ export const MenuMobile = styled.div`
     text-transform: uppercase;
     :hover {
       color: var(--main);
+    }
+  }
+
+  animation: fade .2s  linear;
+
+  @keyframes fade {
+    0% { 
+      opacity: 0;
+    }
+    100% { 
+      opacity: 1;
     }
   }
 `;

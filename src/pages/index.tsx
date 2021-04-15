@@ -15,11 +15,11 @@ export default function Home() {
     <Container>
       <Provider store={store}>
         <Header />
-        <Slider />
-        <About id="about" />
-        <OurServices />
-        <Projects />
-        <Contact />
+        <Slider id="home" />
+        <About id="sobre" />
+        <OurServices id="servicos" />
+        <Projects id="projetos" />
+        <Contact id="contato" />
         <Footer />
         <GalleryModal />
       </Provider>

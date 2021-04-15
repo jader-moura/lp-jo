@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 
+export const WhiteCorretor = styled.div`
+  background-color: var(--white);
+  margin-top: -2rem;
+  z-index: 1;
+
+`;
+
 export const Container = styled.div`
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   img {
     max-width: 500px;
@@ -60,10 +67,10 @@ export const BoxText = styled.div`
   }
 
   @media(max-width: 830px) {
-    padding: 30px;
+    padding: 30px 30px 60px 30px ;
     margin: 30px 0  0 -40px;
     h2 {
-      font-size: 25px;
+      font-size: 22px;
     }
   }
 `;

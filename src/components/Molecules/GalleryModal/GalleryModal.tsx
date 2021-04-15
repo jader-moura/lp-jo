@@ -4,9 +4,9 @@ import {
   Content, 
   CloseIcon, 
   ModalImage, 
-  Arrows, 
-  LeftArrow, 
-  RightArrow 
+  Row, 
+  LeftIcon, 
+  RightIcon 
 } from './styles';
 import { connect } from 'react-redux';
 
@@ -51,13 +51,14 @@ const GalleryModal = ({ modalId, gallery, dispatch }) => {
     <> 
       {modalId && 
           <Container key={gallery[position].id}>
+            <CloseIcon onClick={() => dispatch(toggleItem(closeModal))} />
             <Content>
-              <CloseIcon onClick={() => dispatch(toggleItem(closeModal))} />
-              <ModalImage src={gallery[position].image} />
-              <Arrows>
-                <LeftArrow onClick={prevImg} />
-                <RightArrow onClick={nextImg} />
-              </Arrows>
+              <Row>
+                <LeftIcon onClick={prevImg} />
+                <ModalImage src={gallery[position].image} />
+                <RightIcon onClick={nextImg} />
+              </Row>
+              <h3>{gallery[position].title}</h3>
             </Content>
           </Container>
       }

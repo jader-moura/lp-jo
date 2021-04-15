@@ -43,11 +43,36 @@ const Header = () => {
             <MenuIcon onClick={() => setOpenToggle(true)} />
             {openToggle &&
               <MenuMobile>
-                <a href="#">Home</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#serviços">Serviços</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
+                <a 
+                  href="#" 
+                  onClick={() => setOpenToggle(false)} 
+                >
+                  Home
+                </a>
+                <a 
+                  href="#sobre" 
+                  onClick={() => setOpenToggle(false)}
+                >
+                  Sobre
+                </a>
+                <a 
+                  href="#servicos" 
+                  onClick={() => setOpenToggle(false)}
+                >
+                  Serviços
+                </a>
+                <a 
+                  href="#projetos" 
+                  onClick={() => setOpenToggle(false)}
+                >
+                  Projetos
+                </a>
+                <a 
+                  href="#contato" 
+                  onClick={() => setOpenToggle(false)}
+                >
+                  Contato
+                </a>
                 <CloseIcon onClick={() => setOpenToggle(false)} />
               </MenuMobile>
             }
@@ -56,7 +81,7 @@ const Header = () => {
           <Menu>
             <a href="#">Home</a>
             <a href="#sobre">Sobre</a>
-            <a href="#serviços">Serviços</a>
+            <a href="#servicos">Serviços</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
           </Menu>

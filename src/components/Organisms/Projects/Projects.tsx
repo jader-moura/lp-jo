@@ -10,10 +10,9 @@ function toggleItem(element) {
   };
 }
 
-const Projects = ({ gallery, dispatch }) => {
-
+const Projects = ({ gallery, dispatch, id }) => {
    return (
-    <Container>
+    <Container id={id}>
       <Texts>
         <Titles>
           <h2>Últimos projetos</h2>

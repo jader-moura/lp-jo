@@ -6,9 +6,9 @@ import { Container, TextContent, Content} from './styles';
 import { OurServicesData } from './OurServicesData'
 
 
-const OurServices = () => {
+const OurServices = ({ id }) => {
   return(
-    <Container>
+    <Container id={id}>
       <ContentWidth>
         <Content>
           <TextContent>

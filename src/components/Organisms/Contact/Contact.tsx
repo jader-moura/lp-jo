@@ -3,9 +3,9 @@ import BlackButton from '../../Molecules/BlackButton/BlackButton';
 import ContentWidth from '../../Molecules/ContentWidth/ContentWidth';
 import { Container, Content, Columns, ContactForm, Phone, MailIcon, WhatsappIcon } from './styles';
 
-const Contact = () => {
+const Contact = ({ id }) => {
   return (
-    <Container>
+    <Container id={id}>
       <ContentWidth>
         <Content>
           <Columns>
