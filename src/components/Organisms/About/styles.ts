@@ -4,21 +4,23 @@ export const WhiteCorretor = styled.div`
   background-color: var(--white);
   margin-top: -2rem;
   z-index: 1;
-
 `;
 
 export const Container = styled.div`
-  padding: 2rem 0;
+  padding: 4rem 0;
   display: flex;
+
   img {
     max-width: 500px;
     object-fit: contain;
   }
+
   section {
     display: flex;
     flex-direction: column;
     margin-right: 80px;
   }
+
   @media(max-width: 1100px) {
     img {
       max-width: 400px;
@@ -27,7 +29,9 @@ export const Container = styled.div`
       margin-right: 0px;
     }
   }
+
   @media(max-width: 830px) {
+    padding: 2rem 0;
     flex-wrap: wrap;
     img {
       min-width: 85%;
@@ -46,6 +50,7 @@ export const BoxText = styled.div`
   box-shadow: 0px 5px 30px 0px rgb(0 0 0 / 10%);
   padding: 60px;
   margin: 60px 0  0 -40px;
+  
   h3 {
     font-size: 18px;
     text-transform: uppercase;
@@ -53,6 +58,7 @@ export const BoxText = styled.div`
     letter-spacing: 2px;
     font-weight: 600;
   }
+
   h2 {
     font-size: 38px;
     font-weight: 600;
@@ -62,6 +68,7 @@ export const BoxText = styled.div`
     color: var(--title);
     margin: 1rem 0;
   }
+
   p {
     margin-bottom: 2rem;
   }
@@ -80,6 +87,7 @@ export const CounterContent = styled.div`
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 60px;
+  
   @media(max-width: 830px) {
     padding: 30px;
   }

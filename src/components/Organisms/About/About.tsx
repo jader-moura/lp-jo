@@ -24,7 +24,7 @@ const About = ({ subtitle, title, text, id }: props) => {
               <h3>{subtitle = "Bem-Vindos"}</h3>
               <h2>{title = "Jordana Mariano"}</h2>
               <p>{text = "Formada em Arquitetura e Urbanismo, Jordana Mariano trabalha em carreira solo fazendo muitas vezes parcerias com colegas de profissão, elabora projetos capazes de explorar e experimentar a arquitetura na mais ampla escala possível; desde casas, escolas, edifícios religiosos, hotéis, edifícios universitários, centros de recreação, acreditando em dar a soluções únicas para oferecer o melhor aos seus clientes."}</p>
-              <Button href="#" text="Entrar em contato" />
+              <Button type="button" href="#contato" text="Entrar em contato" />
             </BoxText>
             {/* <CounterContent>
               <Counter countTotal={3} countText="Anos de experiência" key={1} />

@@ -63,8 +63,8 @@ export const CloseIcon = styled(WindowClose)`
   color: red;
   width: 2rem;
   position: absolute;
-  top: 8vh;
-  right: 8vw;
+  top: 5vh;
+  right: 5vw;
   cursor: pointer;
 `;
 

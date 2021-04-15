@@ -32,7 +32,7 @@ const Slider  = ({ id }) => {
                     <Content>
                       <h1>Jordana Mariano</h1>
                       <h2>Arquitetura | Urbanismo | Paisagísmo</h2>
-                      <button>Ver projetos</button>
+                      <a href="#projetos">Ver projetos</a>
                     </Content>
                   </ContentWidth>
               </Container>

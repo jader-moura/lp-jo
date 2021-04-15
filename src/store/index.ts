@@ -5,58 +5,63 @@ const INITIAL_STATE = {
   gallery : [
     {
       id: 1,
-      title: "Comercial Design",
-      image: "ambient-1.jpg"
-    },
-    {
-      id: 2,
-      title: "Comercial Design",
-      image: "ambient-2.jpg"
-    },
-    {
-      id: 3,
-      title: "Comercial Design",
-      image: "ambient-3.jpg" 
-    },
-    {
-      id: 4,
-      title: "Comercial Design",
-      image: "ambient-4.jpg"
-    },
-    {
-      id: 5,
-      title: "Comercial Design",
-      image: "ambient-5.jpg"
-    },
-    {
-      id: 6,
-      title: "Comercial Design",
-      image: "ambient-6.jpg"
-    },
-    {
-      id: 7,
-      title: "Comercial Design",
-      image: "ambient-7.jpg"
-    },
-    {
-      id: 8,
-      title: "Comercial Design",
-      image: "ambient-8.jpg"
-    },
-    {
-      id: 9,
-      title: "Comercial Design",
-      image: "ambient-9.jpg"
-    },
-    {
-      id: 10,
-      title: "Comercial Design",
+      title: "Suíte com escritório",
       image: "ambient-10.jpg"
     },
     {
+      id: 2,
+      title: "Área gourmet",
+      image: "ambient-12.jpg"
+    },
+    {
+      id: 3,
+      title: "Coworking",
+      image: "ambient-14.jpg" 
+    },
+    {
+      id: 4,
+      title: "Cozinha granito marfim white",
+      image: "ambient-15.jpg"
+    },
+    {
+      id: 5,
+      title: "Fachada frontal",
+      image: "ambient-16.jpg"
+    },
+    {
+      id: 6,
+      title: "Fachada frontal",
+      image: "ambient-17.jpg"
+    },
+    {
+      id: 7,
+      title: "Fachada frontal",
+      image: "ambient-18.jpg"
+    },
+    {
+      id: 8,
+      title: "Escritório de engenharia",
+      image: "ambient-19.jpeg"
+    },
+    {
+      id: 9,
+      title: "Fachada frontal container",
+      image: "ambient-20.jpg"
+    },
+    {
+      id: 10,
+      title: "Corredor",
+      image: "ambient-13.jpg"
+    },
+    {
       id: 11,
-      title: "Comercial Design",
-      image: "ambient-11.jpg"
+      title: "Quarto de hospedes",
+      image: "ambient-22.jpg"
+    },
+    {
+      id: 11,
+      title: "Administração",
+      image: "ambient-23.jpg"
     }
   ]
 }

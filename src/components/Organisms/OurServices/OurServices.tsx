@@ -14,7 +14,7 @@ const OurServices = ({ id }) => {
           <TextContent>
             <h2>Nossos serviços</h2>
             <p>O Escritório JM produz design inovador baseado na observação das interações cotidianas, que guardam possibilidades espaciais e programáticas imprevisíveis. Estamos dedicados a defender os desejos e necessidades de nossos clientes.</p>
-            <BlackButton text="Ver todos" href="#" />
+            <BlackButton type="button" text="Contato" href="#contato" />
           </TextContent>
           {OurServicesData.map((element, index) => {
             return (

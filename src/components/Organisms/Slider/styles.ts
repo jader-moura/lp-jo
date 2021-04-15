@@ -60,12 +60,13 @@ export const Content = styled.div`
     color: var(--white);
   }
 
-  button {
+  a {
     color: var(--white);
     background-color: transparent;
     border: 1px solid var(--white);
     margin-top: 3rem;
     transition: .2s ease-in;
+    padding: 1.5rem 5rem;
     :hover {
       background-color: var(--white);
       color: var(--title);
