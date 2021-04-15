@@ -9,10 +9,21 @@ import GalleryModal from "../components/Molecules/GalleryModal/GalleryModal";
 import { Container } from './../components/Organisms/Home/styles';
 import { Provider } from 'react-redux';
 import store from '../store';
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <Container>
+      <Head>
+        <title>Jordana Mariano - Arquiteta</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Jordana Mariano - Arquiteta" key="title" />
+        <meta property="og:description"
+        content="O Escritório JM produz design inovador baseado na observação das interações cotidianas, que guardam possibilidades espaciais e programáticas imprevisíveis."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://jordanamariano.com.br/"/>
+        <meta property="og:image" content="meta-img.png"/>
+      </Head>
       <Provider store={store}>
         <Header />
         <Slider id="home" />

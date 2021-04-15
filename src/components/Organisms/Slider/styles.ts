@@ -74,7 +74,7 @@ export const Content = styled.div`
   }
 
   @media(max-width: 901px) {
-    transform: translateY(180%);
+    transform: translateY(150%);
 
     h1 {
       font-size: 40px;
