@@ -73,12 +73,32 @@ export const ContactForm = styled.form`
     :hover {
       border-color: #181818;
     }
+    &[type-submit] {
+      background-color: #181818;
+    }
   }
 
   @media(max-width: 901px) {
     padding: 30px;
     margin-top: 3rem;
   }
+`;
+
+export const Input = styled.input.attrs({ 
+  type: 'submit',
+})` 
+    background-color: #181818;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    transition: border-color .15s ease-in-out,background-color .15s ease-in-out;
+    color: #fff !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    :hover {
+      border-color: #181818;
+      background-color: var(--white);
+      color: var(--text) !important;
+    }
 `;
 
 export const Phone = styled(PhoneFill)`
