@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-
-interface SliderProps {
-  src: string;
-}
-
+import Image from 'next/image'
 
 export const Container = styled.div`
   height: 100vh;
@@ -12,19 +8,15 @@ export const Container = styled.div`
   z-index: 1;
 `;
 
-export const SliderImg = styled.div<SliderProps>`
+export const SliderImg = styled.div`
   top: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(${(props) => props.src});
-  background-repeat: no-repeat center;
-  background-size: cover;
-  box-shadow:inset 0 0 0 2000px #00000099;
   animation: zoomin 15s  linear;
   white-space: nowrap;
   z-index: -1;
-
+  
   @keyframes zoomin {
     0% { 
       transform: scale(1);
@@ -33,6 +25,10 @@ export const SliderImg = styled.div<SliderProps>`
       transform: scale(1.5);
     }
   }
+  `;
+
+export const ImageSrc = styled(Image)`
+  filter:  contrast(100%) brightness(60%);
 `;
 
 
@@ -46,7 +42,8 @@ export const Content = styled.div`
   font-weight: 600;
   text-align: center;
   height: 100%;
-  transform: translateY(150%);
+  transform: translateY(100%);
+
   h1 {
     font-size: 72px;
     letter-spacing: 1.2px;

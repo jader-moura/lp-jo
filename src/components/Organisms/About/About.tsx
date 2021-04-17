@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../../Molecules/BlackButton/BlackButton';
 import ContentWidth from '../../Molecules/ContentWidth/ContentWidth';
 import { WhiteCorretor, BoxText, Container } from './styles';
+import Image from 'next/image'
 
 interface props {
   id: string,
@@ -12,7 +13,12 @@ const About = ({id} : props) => {
     <WhiteCorretor>
       <ContentWidth>
         <Container id={id}>
-          <img src="/image-about.jpg" />
+          <Image 
+            src="/image-about.jpg" 
+            alt="Foto de perfil de Jordana Mariano" 
+            width={1365} 
+            height={2048} 
+          />
           <section>
             <BoxText>
               <h3>Bem-Vindos</h3>

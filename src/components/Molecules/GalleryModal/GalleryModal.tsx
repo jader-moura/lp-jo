@@ -46,7 +46,6 @@ const GalleryModal = ({ modalId, gallery, dispatch }) => {
     }
   }
 
-  console.log(position);
   return (
     <> 
       {modalId && 
@@ -55,7 +54,12 @@ const GalleryModal = ({ modalId, gallery, dispatch }) => {
             <Content>
               <Row>
                 <LeftIcon onClick={prevImg} />
-                <ModalImage src={gallery[position].image} />
+                <ModalImage 
+                  src={gallery[position].image} 
+                  alt={gallery[position].title}
+                  width={600} 
+                  height={400}
+                />
                 <RightIcon onClick={nextImg} />
               </Row>
               <h3>{gallery[position].title}</h3>

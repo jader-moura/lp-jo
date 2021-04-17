@@ -28,10 +28,12 @@ export const Columns = styled.section`
 
   p {
     max-width: 80%;
+    color: var(--white);
   }
 
   a {
     padding-top: 1rem;
+    color: var(--white);
     display: flex;
     align-content: center;
     :hover {

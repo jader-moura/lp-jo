@@ -8,18 +8,27 @@ import 'react-toastify/dist/ReactToastify.css';
 const Contact = ({ id }) => {
   function sendEmail(e) {
     e.preventDefault();
-
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-      .then((result) => {
-          console.log(result.text);
-          toast.success("Obrigado. Seu e-mail foi enviado com sucesso!");
-          
-        }, (error) => {
-          console.log(error.status);
+    if(!e.target.from_name.value){
+      toast.error("Por favor preencha seu nome");
+    } else if (!e.target.contact_email.value || !e.target.contact_email.value.includes('@')) {
+      toast.error("Por favor preencha seu e-mail corretamente");
+    } else {
+      emailjs.sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
+        e.target, 
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+        .then((result) => {
+            toast.success("Obrigado. Seu e-mail foi enviado com sucesso!");
+            e.target.reset();
+          },
+        (error) => {
           toast.error("Ocorreu um erro, por favor tente novamente!");
-          
         });
       }
+    }
+    console.log(process.env);
       
   return (
     <Container id={id}>
@@ -36,8 +45,12 @@ const Contact = ({ id }) => {
           <Columns>
             <ContactForm onSubmit={sendEmail}>
               <input type="hidden" name="contact_number" />
-              <input type="text" placeholder="Seu Nome" name="user_name" />
-              <input type="text" placeholder="Seu E-mail" name="user_email" />
+              <input type="text" placeholder="Seu Nome" name="from_name" />
+              <input 
+                type="text" 
+                placeholder="Seu E-mail" 
+                name="contact_email" 
+              />
               <input type="text" placeholder="Assunto" name="subject" />
               <textarea placeholder="Sua Mensagem" name="message" />
               <Input type="submit" value="Enviar Mensagem" />

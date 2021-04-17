@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const WhiteCorretor = styled.div`
   background-color: var(--white);
-  margin-top: -2rem;
   z-index: 1;
 `;
 
@@ -50,7 +49,8 @@ export const BoxText = styled.div`
   box-shadow: 0px 5px 30px 0px rgb(0 0 0 / 10%);
   padding: 60px;
   margin: 60px 0  0 -40px;
-  
+  z-index: 2;
+
   h3 {
     font-size: 18px;
     text-transform: uppercase;

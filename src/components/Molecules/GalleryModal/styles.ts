@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { WindowClose } from '@styled-icons/fa-regular/WindowClose';
 import { LeftArrow } from '@styled-icons/boxicons-solid/LeftArrow';
 import { RightArrow } from '@styled-icons/boxicons-solid/RightArrow';
+import Image from 'next/image'
 
 export const Container = styled.div`
   background: rgba(24, 24, 24, 0.8);
@@ -10,18 +11,20 @@ export const Container = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9;
   overflow: hidden;
+  max-height: 100%;
+  max-width: 100%;
 `;
 
 export const Content = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 4rem 1rem;
 
   h3 {
     color: var(--white);
@@ -39,13 +42,9 @@ export const Content = styled.div`
   }
 `;
 
-export const ModalImage = styled.img`
+export const ModalImage = styled(Image)`
   margin: 0 auto;
-  width: 80vw;
-  height: auto;
-
   animation: fade .5s  linear;
-
   @keyframes fade {
     0% { 
       transform: scale(0.8);
