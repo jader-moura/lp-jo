@@ -11,6 +11,7 @@ import {
   ClockIcon,
   MenuIcon,
   CloseIcon,
+  WhatsChat 
 } from './styles';
 
 const Header = () => {
@@ -87,6 +88,7 @@ const Header = () => {
           </Menu>
         }
       </Head>
+      <WhatsChat href="https://api.whatsapp.com/send/?phone=5569993720758" target="_blank" />
     </Container>
   )
 }

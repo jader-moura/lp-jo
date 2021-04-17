@@ -4,6 +4,8 @@ import { PhoneFill } from '@styled-icons/bootstrap/PhoneFill';
 import { ClockFill } from '@styled-icons/bootstrap/ClockFill';
 import { Menu2Outline } from '@styled-icons/evaicons-outline/Menu2Outline';
 import { CloseCircle } from '@styled-icons/ionicons-outline/CloseCircle'
+import { WhatsappSquare } from '@styled-icons/fa-brands/WhatsappSquare';
+
 
 export const Container = styled.div`
   display: flex;
@@ -121,7 +123,7 @@ export const MenuMobile = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 3;
+  z-index: 9;
   a {
     color: var(--white);
     padding: 1rem;
@@ -143,4 +145,16 @@ export const MenuMobile = styled.div`
       opacity: 1;
     }
   }
+`;
+
+export const WhatsChat = styled(WhatsappSquare)`
+  color: #25d366;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3;
+  cursor: pointer;
+  background-color: var(--white);
 `;

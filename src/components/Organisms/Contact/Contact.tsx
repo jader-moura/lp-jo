@@ -1,6 +1,15 @@
 import React from 'react';
 import ContentWidth from '../../Molecules/ContentWidth/ContentWidth';
-import { Container, Content, Columns, ContactForm, Phone, MailIcon, WhatsappIcon, Input } from './styles';
+import { 
+  Container, 
+  Content, 
+  Columns, 
+  ContactForm, 
+  Phone, 
+  MailIcon, 
+  WhatsappIcon, 
+  Input, 
+} from './styles';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,10 +23,10 @@ const Contact = ({ id }) => {
       toast.error("Por favor preencha seu e-mail corretamente");
     } else {
       emailjs.sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, 
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
+        `${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`, 
+        `${process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}`, 
         e.target, 
-        process.env.REACT_APP_EMAILJS_USER_ID
+        `${process.env.NEXT_PUBLIC_EMAILJS_USER_ID}`
       )
         .then((result) => {
             toast.success("Obrigado. Seu e-mail foi enviado com sucesso!");
