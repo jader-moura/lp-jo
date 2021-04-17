@@ -9,7 +9,7 @@ import {
 } from './styles';
 
 export interface ServiceCardProps {
-  icontype?: 'pencilIcon' | 'chairIcon' | 'plantIcon' | 'houseIcon' | 'cameraIcon',
+  icontype?: string,
   title: string,
   text: string,
   image: string
