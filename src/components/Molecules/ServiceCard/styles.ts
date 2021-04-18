@@ -5,7 +5,6 @@ import { Chair } from '@styled-icons/material-outlined/Chair';
 import { Plant } from '@styled-icons/remix-line/Plant';
 import { HouseSiding } from '@styled-icons/material-rounded/HouseSiding';
 import { CameraOutline } from '@styled-icons/evaicons-outline/CameraOutline';
-import Image from 'next/image'
 
 
 export const Container = styled.div`
@@ -48,6 +47,20 @@ export const Container = styled.div`
   @media(max-width: 678px) {
     min-width: 99%;
   }
+
+  img {
+    filter:  contrast(120%) brightness(30%);
+  animation: fade .2s;
+  
+  @keyframes fade {
+      0% { 
+        opacity: 0;
+      }
+      100% { 
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 export const Content = styled.section`
@@ -63,18 +76,4 @@ export const PlantIcon = styled(Plant)`
 export const HouseIcon = styled(HouseSiding)`
 `;
 export const CameraIcon = styled(CameraOutline)`
-`;
-
-export const BackgroundImage = styled(Image)`
-  filter:  contrast(120%) brightness(30%);
-  animation: fade .2s;
-  
-  @keyframes fade {
-      0% { 
-        opacity: 0;
-      }
-      100% { 
-        opacity: 1;
-      }
-    }
 `;

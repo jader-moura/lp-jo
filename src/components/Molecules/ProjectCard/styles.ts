@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 
 
 export const Container = styled.div`
@@ -40,11 +39,11 @@ export const Container = styled.div`
   }
 
   :hover {
-    box-shadow:inset 0 0 0 2000px #00000099;
     h3 {
       display: block;
+      pointer-events: none;
       filter: brightness(150);
-    }
+    }    
   }
 
   @media(max-width: 901px) {
@@ -54,13 +53,11 @@ export const Container = styled.div`
   @media(max-width: 767px) {
     min-width: 100%;
   }
-`;
-
-export const ProjectImage = styled(Image)`
-  object-fit: cover;
-  :hover {
-    opacity: 0.6;
-    filter:  brightness(30%);
+  img {
+    object-fit: cover;
+    :hover {
+      opacity: 0.8;
+      filter:  brightness(50%);
+    }
   }
 `;
-

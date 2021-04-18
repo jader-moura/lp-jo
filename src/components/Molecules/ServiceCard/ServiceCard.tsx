@@ -7,8 +7,9 @@ import {
   PlantIcon, 
   HouseIcon, 
   CameraIcon,
-  BackgroundImage 
 } from './styles';
+import Image from 'next/image'
+
 
 export interface ServiceCardProps {
   icontype?: string,
@@ -16,7 +17,6 @@ export interface ServiceCardProps {
   text: string,
   image: string
 }
-
 
 const ServiceCard = ({ title, text, icontype, image }:ServiceCardProps) => {
   const[activeImg, setActiveImg] = useState(false);
@@ -31,8 +31,9 @@ const ServiceCard = ({ title, text, icontype, image }:ServiceCardProps) => {
 
   return (
     <Container onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+      
       {activeImg &&
-        <BackgroundImage src={image} layout="fill" />
+        <Image src={image} layout="fill" />
       }
       <Content>
         {icontype === 'pencilIcon' ? <PencilIcon /> : null }
