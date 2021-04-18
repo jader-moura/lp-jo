@@ -5,13 +5,10 @@ import { Chair } from '@styled-icons/material-outlined/Chair';
 import { Plant } from '@styled-icons/remix-line/Plant';
 import { HouseSiding } from '@styled-icons/material-rounded/HouseSiding';
 import { CameraOutline } from '@styled-icons/evaicons-outline/CameraOutline';
+import Image from 'next/image'
 
 
-interface props {
-  image: string;
-}
-
-export const Container = styled.div<props>`
+export const Container = styled.div`
   background-color: var(--white);
   padding: 3rem;
   display: flex;
@@ -19,6 +16,7 @@ export const Container = styled.div<props>`
   min-height: 280px;
   max-width: 32%;
   margin-bottom: 2rem;
+  position: relative;
   svg {
     color: var(--main);
     transition: .3s ease-in;
@@ -35,10 +33,6 @@ export const Container = styled.div<props>`
     margin: 1rem 0;
   }
   :hover {
-    background-image: url(${(props) => props.image});
-    box-shadow:inset 0 0 0 2000px #00000099;
-    background-repeat: no-repeat center; 
-    background-size: cover;
     h3, p {
       color: var(--white);
     }
@@ -56,6 +50,10 @@ export const Container = styled.div<props>`
   }
 `;
 
+export const Content = styled.section`
+  z-index: 2;
+`;
+
 export const PencilIcon = styled(PencilRuler2)`
 `;
 export const ChairIcon = styled(Chair)`
@@ -65,4 +63,18 @@ export const PlantIcon = styled(Plant)`
 export const HouseIcon = styled(HouseSiding)`
 `;
 export const CameraIcon = styled(CameraOutline)`
+`;
+
+export const BackgroundImage = styled(Image)`
+  filter:  contrast(120%) brightness(30%);
+  animation: fade .2s;
+  
+  @keyframes fade {
+      0% { 
+        opacity: 0;
+      }
+      100% { 
+        opacity: 1;
+      }
+    }
 `;

@@ -29,6 +29,7 @@ export const SliderImg = styled.div`
 
 export const ImageSrc = styled(Image)`
   filter:  contrast(100%) brightness(60%);
+  object-fit: cover;
 `;
 
 

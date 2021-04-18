@@ -38,7 +38,8 @@ const Slider  = ({ id }) => {
                 <SliderImg>
                   <ImageSrc 
                     src={element.image} 
-                    layout="fill"
+                    width={deviceWidth} 
+                    height={deviceHeight} 
                     alt="Imagens do slider"
                   />
                 </SliderImg>

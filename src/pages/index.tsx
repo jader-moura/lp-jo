@@ -6,14 +6,26 @@ import Projects from "../components/Organisms/Projects/Projects";
 import Slider from "../components/Organisms/Slider/Slider";
 import About from "../components/Organisms/About/About";
 import GalleryModal from "../components/Molecules/GalleryModal/GalleryModal";
-import { Container } from './../components/Organisms/Home/styles';
+import { Container, Loader, SpinnerIcon } from './../components/Organisms/Home/styles';
 import { Provider } from 'react-redux';
 import store from '../store';
 import Head from 'next/head'
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const[loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1500);
+  }, [])
+
   return (
     <Container>
+      {loading &&
+        <Loader>
+          <SpinnerIcon />
+        </Loader>
+      }
       <Head>
         <title>Jordana Mariano - Arquiteta</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

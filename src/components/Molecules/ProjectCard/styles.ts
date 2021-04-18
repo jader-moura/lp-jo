@@ -1,10 +1,8 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
-interface ProjectCardProps {
-  image: string;
-}
 
-export const Container = styled.div<ProjectCardProps>`
+export const Container = styled.div`
   height: 400px;
   flex: 1;
   min-width: 33%;
@@ -13,10 +11,7 @@ export const Container = styled.div<ProjectCardProps>`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  background-image: url(${(props) => props.image});
-  background-repeat: no-repeat center;
-  background-size: cover;
+  position: relative;
 
   text-align: center;
   color: var(--white);
@@ -39,15 +34,16 @@ export const Container = styled.div<ProjectCardProps>`
     transition: .5s ease-in;
   }
 
-  h3, p {
+  h3 {
     max-width: 60%;
     display: none;
   }
 
   :hover {
     box-shadow:inset 0 0 0 2000px #00000099;
-    h3, p {
+    h3 {
       display: block;
+      filter: brightness(150);
     }
   }
 
@@ -57,6 +53,14 @@ export const Container = styled.div<ProjectCardProps>`
 
   @media(max-width: 767px) {
     min-width: 100%;
+  }
+`;
+
+export const ProjectImage = styled(Image)`
+  object-fit: cover;
+  :hover {
+    opacity: 0.6;
+    filter:  brightness(30%);
   }
 `;
 
