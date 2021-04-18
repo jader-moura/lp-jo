@@ -40,7 +40,6 @@ const Slider  = ({ id }) => {
                     src={element.image} 
                     width={deviceWidth} 
                     height={deviceHeight} 
-                    alt="Imagens do slider"
                   />
                 </SliderImg>
                   <ContentWidth>

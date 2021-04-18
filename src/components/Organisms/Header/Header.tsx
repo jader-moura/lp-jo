@@ -88,7 +88,9 @@ const Header = () => {
           </Menu>
         }
       </Head>
-      <WhatsChat href="https://api.whatsapp.com/send/?phone=5569993720758" target="_blank" />
+      <a href="https://api.whatsapp.com/send/?phone=5569993720758" target="_blank">
+        <WhatsChat />
+      </a>
     </Container>
   )
 }
