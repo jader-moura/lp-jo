@@ -23,7 +23,7 @@ const About = ({id} : props) => {
             <BoxText>
               <h3>Bem-Vindos</h3>
               <h2>Jordana Mariano</h2>
-              <p>Formada em Arquitetura e Urbanismo, Jordana Mariano trabalha em carreira solo fazendo muitas vezes parcerias com colegas de profissão, elabora projetos capazes de explorar e experimentar a arquitetura na mais ampla escala possível; desde casas, escolas, edifícios religiosos, hotéis, edifícios universitários, centros de recreação, acreditando em dar a soluções únicas para oferecer o melhor aos seus clientes.</p>
+              <p>Arquiteta e Urbanista, Jordana Mariano trabalha em carreira solo e em parcerias. Elaborando projetos capazes de explorar e experimentar a arquitetura em todos os seguimentos, dando os melhores resultados, estabelecendo um sistema de trabalho capaz de criar e implementar projetos afinados com o mercado e com ênfase na relação custo/benefício aos seus clientes.</p>
               <Button type="button" href="#contato" text="Entrar em contato" />
             </BoxText>
           </section>

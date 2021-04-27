@@ -45,7 +45,7 @@ const Slider  = ({ id }) => {
                   <ContentWidth>
                     <Content>
                       <h1>Jordana Mariano</h1>
-                      <h2>Arquitetura | Urbanismo | Paisagísmo</h2>
+                      <h2>Arquitetura | Urbanismo | Modelagem 3D</h2>
                       <a href="#projetos">Ver projetos</a>
                     </Content>
                   </ContentWidth>
